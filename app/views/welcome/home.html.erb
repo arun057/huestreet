@@ -1,16 +1,26 @@
-<div id="color_picker">
-	<ul id="colors">
-		<% @all_colors.each do | color | %>
-			<li class="color_selector">
-				<a href="/colors/<%= color.name.downcase %>" title="<%= color.name %>"><div class="color_box" style="background-color: <%= color.hex%>;" ></div></a>
-			</li>
-		<% end %>
+<div id="thumbs">
+	<ul id="photos">
+		<li id="color_drop" class="drop-menu masonry_item">
+			<div id="color_tile" style="background-color:<%= @current_color %>"></div>
+			<ul class="sub-menu" style="display:none; opacity:0;">
+				<li style="background:rgba(255,255,0,0.9);" id="yellow" class="colorSelect"   value="0"><a href="/colors/yellow" title="yellow"></a></li>
+				<li style="background:rgba(242,101,34,.95);" id="orange" class="colorSelect"  ><a href="/colors/orange" title="orange"></a></li>
+				<li style="background:rgba(255,0,0,0.9);" id="red" class="colorSelect" value="1"  ><a href="/colors/red" title="red"></a></li>
+				<li style="background:rgba(146,39,143, 0.9);" id="violet" class="colorSelect" value="2"  ><a href="/colors/purple" title="purple"></a></li>
+				<li style="background:rgba(0,0,255,0.9);" id="blue" class="colorSelect" value="3"  ><a href="/colors/blue" title="blue"></a></li>
+				<li style="background:rgba(0,166,81,0.9);"id="green" class="colorSelect" value="4"  ><a href="/colors/green" title="green"></a></li>
+				<li style="background:rgba(117,76,36,0.9);" id="brown" class="colorSelect" value="5"  ><a href="/colors/brown" title="brown"></a></li>
+				<li style="background:rgba(255,255, 255, 0.9);" id="white" class="colorSelect" value="6"  ><a href="/colors/white" title="white"></a></li>
+				<li style="background:rgba(85,85,85,0.9);" id="grey" class="colorSelect" value="7"  ><a href="/colors/grey" title="grey"></a></li>
+				<li style="background:rgba(0,0,0,0.9);" id="black" class="colorSelect" value="8"  ><a href="/colors/black" title="black"></a></li>
+			</ul>
+		</li>
+	  <% @all_images.each do | image | %>
+	    <li class="masonry_item">
+	    	<a href="/asset/<%= image.asset.id %>">
+	      <%= image_tag image.asset.image_url(:home_thumb) ,:class => 'image_item' if image.asset.image? %>
+	  		</a>
+	    </li>
+	  <% end %>
 	</ul>
 </div>
-<ul id="masonry">
-  <% @all_images.each do | image | %>
-    <li class="masonry_item">
-      <%= image_tag image.asset.image_url(:thumb) ,:class => 'image_item' if image.asset.image? %>
-    </li>
-  <% end %>
-</ul>

@@ -2,14 +2,40 @@
 <html>
 <head>
   <title>Huestreet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="keywords" content="stye, street style, fashion" />
+  <meta http-equiv="description" content="street style hunter " />
+  <meta http-equiv="title" content="Street Style" />
+  <meta property="og:description" content="Street Style Hunter" />
+  <meta property="og:title" content="Street Style" />
+  <meta property="og:url" content="Street Style" />
+
   <%= stylesheet_link_tag    "reset", "application", controller_name, :media => "all" %>
   <%= javascript_include_tag "application", controller_name %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="header"><a href="/" title="home"><%= image_tag 'logo.png' %></a></div>
+<div class="subHeader">
+<nav id="topNav">
+	<ul class="tabs">
+		<li><a href="/uploads" class="tab activeTab" id="photos">MY PHOTOS</a></li>
+		<li><a href="#" class="tab hiddenTab" id="collections">COLLECTIONS</a></li>
+	</ul></nav>
+</div>
 
 <%= yield %>
 
+
+<div class="footerMenu">
+	<nav id="bottomNav">
+		<ul>
+	    	<li><a href="/map" title="map">Map</a></li>
+	  		<li><a href="/asset/new" title="photo">:)</a></li>
+			<li class="last"><a href="/" title="explore">Explore</a></li>
+		</ul>
+	</nav>
+</div>
 <footer><%= yield :scripts %></footer>
 </body>
 </html>
