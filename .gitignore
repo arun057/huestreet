@@ -36,3 +36,4 @@ rerun.txt
 pickle-email-*.html
 *.sublime*
 public/uploads/tmp/*
+.DS_Store
