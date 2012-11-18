@@ -14,7 +14,7 @@ class AssetUploader < CarrierWave::Uploader::Base
   # storage :file
   storage :fog
 
-  # process :auto_orient
+  process :fix_exif_rotation
   process :strip
 
   # Override the directory where uploaded files will be stored.
@@ -89,9 +89,19 @@ class AssetUploader < CarrierWave::Uploader::Base
     uuid.generate
   end
 
+  # Rotates the image based on the EXIF Orientation
+  def fix_exif_rotation
+    manipulate! do |img|
+      img.auto_orient!
+      img = yield(img) if block_given?
+      img
+    end
+  end
+
+  # Strips out all embedded information from the image
   def strip
     manipulate! do |img|
-      img.strip
+      img.strip!
       img = yield(img) if block_given?
       img
     end
