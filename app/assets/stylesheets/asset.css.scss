@@ -58,7 +58,7 @@ html, body {
 }
 
 #image_uploader {
-	width: 80%;
+	width: 100%;
 	margin:0px auto;
 	font-size:12px;
 	border: 1px solid #000000;
@@ -66,10 +66,11 @@ html, body {
 
 #image_form input[type="submit"] {
 	margin: 20px auto;
-	width:80%;
+	width:100%;
 	font-size:12px;
 	border:1px solid #000000;
 }
+input{width:100%; padding:10px;}
 
 .filebutton.black {
 	display: inline-block;
