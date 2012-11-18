@@ -69,8 +69,9 @@ html, body {
 	width:100%;
 	font-size:12px;
 	border:1px solid #000000;
+	font: lighter 12px/16px Helvetica, Sans-serif;
+	padding: 9px 11px;
 }
-input{width:100%; padding:10px;}
 
 .filebutton.black {
 	display: inline-block;
@@ -80,7 +81,7 @@ input{width:100%; padding:10px;}
 	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74,74,74,0.85)), color-stop(0.5, rgba(20,20,20,0.75)), color-stop(0.5, rgba(2,2,2,0.75)), to(rgba(14,14,14,0.75))); 
 	color: #fff;
 	text-shadow: #000 0 1px 0;
-	font: bold 16px/20px Helvetica, Sans-serif;
+	font: lighter 12px/16px Helvetica, Sans-serif;
 	padding: 9px 11px;
 }
 .filebutton.black:hover, .button.black.hover {
