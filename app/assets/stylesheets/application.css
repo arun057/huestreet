@@ -225,9 +225,9 @@ label {
 	cursor: pointer;
 }
 #color_tile { height: 100%; width: 100%;
--webkit-box-shadow: inset 0px 13px 15px rgba(0,0,0, 0.4);
-		-moz-box-shadow: inset 0px 13px 15px rgba(0,0,0, 0.4);
-		box-shadow: inset 0px 13px 15px rgba(0,0,0, 0.4);
+-webkit-box-shadow: inset 13px 13px 15px rgba(0,0,0, 0.4);
+		-moz-box-shadow: inset 13px 13px 15px rgba(0,0,0, 0.4);
+		box-shadow: inset 13px 13px 15px rgba(0,0,0, 0.4);
 }
 
 .plus {
