@@ -25,6 +25,9 @@ class AuthController < ApplicationController
     redirect_to "/"
   end
 
+  def index
+  end
+
   private 
 
   def profiles_url

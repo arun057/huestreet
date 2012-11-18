@@ -1,3 +1,42 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body{ width: 100%;}
+
+#colors, #colors *{
+	height: 100%;
+}
+
+#colors { margin: 0 auto; width: 400px;}
+
+#colors li {
+	float: left;
+	width: 25px;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+
+#colors li a .color_box {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #ccc;
+}
+
+#color_picker { 
+	position: fixed;
+	padding-top: 5px;
+	clear: both;
+	height: 35px;
+	width: 100%;
+	z-index: 99999;
+	text-align: center;
+	background: white;
+	top: 0;
+}
+
+#masonry{
+	margin-top: 50px;
+}
+
+.image_item { float: left; }

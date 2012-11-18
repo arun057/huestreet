@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   	# raise request.env['REQUEST_URI'].inspect 
   	if !user_logged_in?
   		session[:return_to] ||= request.env['REQUEST_URI']
-  		redirect_to '/auth/singly?service=facebook'
+  		redirect_to '/login'
   	end
   end
 end

@@ -6,6 +6,7 @@ class AssetController < ApplicationController
 
   def create
   	@asset = Asset.new(params[:asset])
+    @asset.user_id = session[:current_user]
     if @asset.save
       flash[:notice] = "Successfully created painting."
       redirect_to asset_path(@asset)
@@ -29,5 +30,4 @@ class AssetController < ApplicationController
       marker.json({ :id => asset.id})
     end
   end
-
 end

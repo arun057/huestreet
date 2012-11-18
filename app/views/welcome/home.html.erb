@@ -1,7 +1,16 @@
+<div id="color_picker">
+	<ul id="colors">
+		<% @all_colors.each do | color | %>
+			<li class="color_selector">
+				<a href="/colors/<%= color.name.downcase %>" title="<%= color.name %>"><div class="color_box" style="background-color: <%= color.hex%>;" ></div></a>
+			</li>
+		<% end %>
+	</ul>
+</div>
 <ul id="masonry">
   <% @all_images.each do | image | %>
     <li class="masonry_item">
-      <%= image_tag image.asset.image_url(:thumb) if image.asset.image? %>
+      <%= image_tag image.asset.image_url(:thumb) ,:class => 'image_item' if image.asset.image? %>
     </li>
   <% end %>
 </ul>

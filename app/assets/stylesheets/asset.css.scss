@@ -3,3 +3,104 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .map_marker { border:2px solid white; outline: 1px solid #ccc; background: #FFFFFF; text-align: center;}
+
+.map_container {
+  position: relative;
+  background-color: #E5E3DF;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  height: 100%;
+  width: 100%;
+}
+
+.gmaps4rails_map {
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+#colors, #colors *{
+	height: 100%;
+}
+
+#colors { margin: 0 auto; width: 400px;}
+
+#colors li {
+	float: left;
+	width: 25px;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+
+#colors li a .color_box {
+	width: 25px;
+	height: 25px;
+	border: 1px solid #ccc;
+}
+
+#color_picker { 
+	position: fixed;
+	padding-top: 5px;
+	clear: both;
+	height: 35px;
+	width: 100%;
+	z-index: 99999;
+	text-align: center;
+	background: white;
+	top: 0;
+}
+
+#image_form {
+	
+}
+
+#image_uploader {
+	width: 311px;
+}
+
+#image_form input[type="submit"] {
+	margin: 20px 0 0;
+	padding: 10px 140px;
+}
+
+.filebutton.black {
+	display: inline-block;
+	-webkit-border-radius: 12px;
+	-webkit-box-shadow: 2px 2px 3px #999; 
+	border: solid 3px rgb(110,110,110);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74,74,74,0.85)), color-stop(0.5, rgba(20,20,20,0.75)), color-stop(0.5, rgba(2,2,2,0.75)), to(rgba(14,14,14,0.75))); 
+	color: #fff;
+	text-shadow: #000 0 1px 0;
+	font: bold 16px/20px Helvetica, Sans-serif;
+	padding: 9px 11px;
+}
+.filebutton.black:hover, .button.black.hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(135,148,203,0.85)), color-stop(0.5, rgba(34,56,159,0.75)), color-stop(0.5, rgba(0,27,145,0.75)), to(rgba(2,59,152,0.65)));  
+	color: #fff;
+	text-shadow: #000 0 1px 0;
+	-webkit-box-shadow: inset rgba(207,207,255,0.75) 0px 1px 1px;
+}
+
+.button.black {
+	display: inline-block;
+	-webkit-border-radius: 12px;
+	-webkit-box-shadow: 2px 2px 3px #999; 
+	border: solid 3px rgb(110,110,110);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(74,74,74,0.85)), color-stop(0.5, rgba(20,20,20,0.75)), color-stop(0.5, rgba(2,2,2,0.75)), to(rgba(14,14,14,0.75))); 
+	color: #fff;
+	text-shadow: #000 0 1px 0;
+	font: bold 16px/20px Helvetica, Sans-serif;
+	padding: 9px 11px;
+}
+.button.black:hover, .button.black.hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(135,148,203,0.85)), color-stop(0.5, rgba(34,56,159,0.75)), color-stop(0.5, rgba(0,27,145,0.75)), to(rgba(2,59,152,0.65)));  
+	color: #fff;
+	text-shadow: #000 0 1px 0;
+	-webkit-box-shadow: inset rgba(207,207,255,0.75) 0px 1px 1px;
+}
+
+#table_wrapper { display: table; margin: 0 auto; width: 100px; height:100%;}
+#cell { display: table-cell; vertical-align: middle; }

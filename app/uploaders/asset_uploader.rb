@@ -20,16 +20,20 @@ class AssetUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  version :regular do
+    process :resize_to_limit => [1024,768]
+  end
+
   version :thumb do
    process :resize_to_limit => [200, 200]
   end
 
   version :map_thumb do
-    process :resize_to_limit => [50,50]
+    process :resize_to_fill => [100,100]
   end
 
-  version :map_tiny do
-    process :resize_to_limit => [32, 32]
+  version :home_thumb do
+    process :resize_to_fill => [200, 200]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
