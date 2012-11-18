@@ -14,7 +14,7 @@ class AssetUploader < CarrierWave::Uploader::Base
   # storage :file
   storage :fog
 
-  process :auto_orient
+  # process :auto_orient
   process :strip
 
   # Override the directory where uploaded files will be stored.
@@ -87,6 +87,14 @@ class AssetUploader < CarrierWave::Uploader::Base
     UUID.state_file = false
     uuid = UUID.new
     uuid.generate
+  end
+
+  def strip
+    manipulate! do |img|
+      img.strip
+      img = yield(img) if block_given?
+      img
+    end
   end
 
 end
