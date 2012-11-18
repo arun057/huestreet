@@ -8,6 +8,8 @@ class Asset < ActiveRecord::Base
   has_many :colorhuesAsset
   after_save :create_color_association
 
+  acts_as_gmappable :process_geocoding => false, :lat => "lat", :lng => "lng"
+
   private
 
   def create_color_association

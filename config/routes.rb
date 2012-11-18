@@ -1,5 +1,6 @@
 Huestreet::Application.routes.draw do
   resources :asset
+  match "/map" => "asset#index"
 
   match "auth/:service"          => "auth#service"
   match "auth/:service/callback" => "auth#callback"

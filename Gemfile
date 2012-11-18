@@ -52,3 +52,6 @@ gem 'uuid'
 gem 'color_namer'
 gem 'color_percent'
 gem 'rmagick', :require => false
+
+
+gem 'gmaps4rails'

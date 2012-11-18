@@ -24,6 +24,14 @@ class AssetUploader < CarrierWave::Uploader::Base
    process :resize_to_limit => [200, 200]
   end
 
+  version :map_thumb do
+    process :resize_to_limit => [50,50]
+  end
+
+  version :map_tiny do
+    process :resize_to_limit => [32, 32]
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
