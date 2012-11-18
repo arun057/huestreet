@@ -1,8 +1,11 @@
 $(document).ready(function(){
-	$('#masonry').isotope({
-	  masonry: {
-	  	itemSelector : '.masonry_item',
-	    columnWidth: 240
-	  }
+	var container = $('#masonry');
+	container.imagesLoaded(function(){
+		container.isotope({
+		  masonry: {
+		  	itemSelector : '.masonry_item',
+		    columnWidth: 210
+		  }
+		});
 	});
 });
