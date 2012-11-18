@@ -285,4 +285,16 @@ label {
 
 	}
 
-#bottomNav .camera img { width:35px;}
+#bottomNav .camera img {
+	width: 100px;
+	position: relative;
+	bottom: 11px;
+	right: 5px;
+}
+
+#bottomNav .camera { 
+	height: 110px;
+	position: relative;
+	bottom: 40px;
+	background: #F0EEE4;
+}
