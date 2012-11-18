@@ -195,7 +195,7 @@ height:40px;
 #topNav ul li:hover{height:40px;}
 
 #bottomNav ul li a{color:#666;size:12px; height:20px;}
-#bottomNav ul li{width:33.2%;}
+#bottomNav ul li{width:33.2%; height:50px;}
 #bottomNav ul li a{height:60px;}
 
 /*
