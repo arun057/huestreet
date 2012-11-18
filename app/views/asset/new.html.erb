@@ -1,4 +1,6 @@
 <%= form_for @asset, :url => asset_index_path(@asset), :html => {:multipart => true} do |f| %>
+	<%= f.hidden_field :lat , :id => 'asset_lat' %>
+	<%= f.hidden_field :lng , :id => 'asset_lng' %>
   <p>
     <%= f.file_field :image %>
   </p>

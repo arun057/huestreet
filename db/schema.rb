@@ -11,15 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118032505) do
+ActiveRecord::Schema.define(:version => 20121118101652) do
 
   create_table "assets", :force => true do |t|
-    t.string   "lat"
-    t.string   "lng"
+    t.decimal  "lat",        :precision => 9, :scale => 6
+    t.decimal  "lng",        :precision => 9, :scale => 6
     t.string   "image"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
   end
 
   create_table "authorizations", :force => true do |t|
