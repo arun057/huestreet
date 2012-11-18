@@ -288,7 +288,7 @@ label {
 	width: 100px;
 	position: relative;
 	bottom: 11px;
-	right: 5px;
+	margin: 0 auto;
 }
 
 #bottomNav .camera { 
@@ -296,4 +296,5 @@ label {
 	position: relative;
 	bottom: 40px;
 	background: #F0EEE4;
+	width: 70%;
 }
