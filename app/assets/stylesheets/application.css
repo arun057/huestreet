@@ -223,7 +223,6 @@ label {
 	width: 100px;
 	height:100px;
 	cursor: pointer;
-	float: left;
 }
 #color_tile { height: 100%; width: 100%;}
 
