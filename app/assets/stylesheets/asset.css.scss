@@ -54,22 +54,29 @@ html, body {
 }
 
 #image_form {
+	padding:0px;
+	margin:0px;
 	
 }
 
 #image_uploader {
 	width: 100%;
 	margin:0px auto;
-	font-size:12px;
+	font-size:16px;
+	font-weight:lighter;
 	border: 1px solid #000000;
+	background:black;
+	color:white;
 }
+#image_uploader button{background:black; color:white;}
+#image_uploader form{background:black; color:white;}
 
 #image_form input[type="submit"] {
 	margin: 20px auto;
 	width:100%;
-	font-size:12px;
+	font-size:16px;
 	border:1px solid #000000;
-	font: lighter 12px/16px Helvetica, Sans-serif;
+	font: lighter 16px/16px Helvetica, Sans-serif;
 	padding: 9px 11px;
 }
 
