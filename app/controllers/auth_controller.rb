@@ -17,6 +17,9 @@ class AuthController < ApplicationController
     end
     @user = user || User.find(@authorization[:user_id])
     session[:current_user] = @user.id
+    if session[:return_to].nil? 
+      session[:return_to] = '/'
+    end
     redirect_to session[:return_to]
   end
 
@@ -26,6 +29,9 @@ class AuthController < ApplicationController
   end
 
   def index
+    if user_logged_in? 
+      redirect_to '/' and return
+    end
   end
 
   private 
