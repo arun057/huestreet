@@ -34,3 +34,5 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+*.sublime*
+public/uploads/tmp/*

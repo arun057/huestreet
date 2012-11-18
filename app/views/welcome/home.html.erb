@@ -1,2 +1,7 @@
-<h1>Welcome#home</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+<ul id="masonry">
+  <% @all_images.each do | image | %>
+    <li class="masonry_item">
+      <%= image_tag image.asset.image_url(:thumb) if image.asset.image? %>
+    </li>
+  <% end %>
+</ul>

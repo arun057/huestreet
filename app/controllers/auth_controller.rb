@@ -16,9 +16,8 @@ class AuthController < ApplicationController
       user.save
     end
     @user = user || User.find(@authorization[:user_id])
-    session[:access_token] = auth_hash.credentials.token
     session[:current_user] = @user.id
-    redirect_to "/"
+    redirect_to session[:return_to]
   end
 
   def logout
