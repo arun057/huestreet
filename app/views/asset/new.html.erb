@@ -1,0 +1,6 @@
+<%= form_for @asset, :url => asset_index_path(@asset), :html => {:multipart => true} do |f| %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
